@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/style.css">
+
+    <style>
+        .fail-message {
+            text-align: center;
+            margin: 20px;
+            padding: 15px;
+            border: 3px dashed red;
+        }
+
+    </style>
+
+    <title>Feedback Form</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="container-logo">
+            <img src="../static/logo.jpg" alt="Bharadwaj Tech" class="logo">
+        </div>
+        {% if message %}
+            <h2 class="fail-message">{{message | safe}}</h2>
+        {% endif %}
+        <div class="col-12">
+            <form action="/submit" method="POST">
+                <div class="form-group">
+                    <div class="row">
+                        <label for="customername" class="offset-lg-4 col-lg-4 col col-form-label"><h4>Customer Name</h4></label>
+                    </div>
+                    <div class="row">
+                        <div class="offset-lg-4 col-lg-4">
+                            <input type="text" name="customername" class="form-control" id="customername" placeholder="Customer Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label for="dealer" class="offset-lg-4 col-lg-4 col col-form-label"><h4>Dealer</h4></label>
+                    </div>
+                    <div class="row">
+                        <div class="offset-lg-4 col-lg-4">
+                            <select class="form-control" name="dealer" id="dealer">
+                                <option>Karan Sardana</option>
+                                <option>Ayush Kumar</option>
+                                <option>Rohan Gupta</option>
+                                <option>Somesh Pal</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="row">
+                        <label for="dealer" class="offset-lg-4 col-lg-6 col col-form-label"><h4>Please rate your daeler</h4></label>
+                    </div>
+                    <div class="row">
+                        <div class="offset-lg-4 col-lg-8">
+                            <input type="radio" name="rating" value="1" id="r1">
+                            <label for="r1">1</label>
+                            <input type="radio" name="rating" value="2" id="r2">
+                            <label for="r2">2</label>
+                            <input type="radio" name="rating" value="3" id="r3">
+                            <label for="r3">3</label>
+                            <input type="radio" name="rating" value="4" id="r4">
+                            <label for="r4">4</label>
+                            <input type="radio" name="rating" value="5" id="r5">
+                            <label for="r5">5</label>
+                            <input type="radio" name="rating" value="6" id="r6">
+                            <label for="r6">6</label>
+                            <input type="radio" name="rating" value="7" id="r7">
+                            <label for="r7">7</label>
+                            <input type="radio" name="rating" value="8" id="r8">
+                            <label for="r8">8</label>
+                            <input type="radio" name="rating" value="9" id="r9">
+                            <label for="r9">9</label>
+                            <input type="radio" name="rating" value="10" id="r10" checked>
+                            <label for="r10">10</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="comments" class="offset-lg-4 col-lg-4 col col-form-label"><h4>Your Experience</h4></label>
+                    <div class="offset-lg-4 col-lg-4">
+                        <textarea class="form-control" id="comments" name="comments" rows="6"></textarea>
+                    </div>
+                </div>
+                <div class="form-group row d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary"><strong>Send Feedback</strong></button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>

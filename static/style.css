@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    background-color: #DBDBDB;
+}
+
+.container {
+    margin-top: 10vh;
+}
+
+.container-logo {
+    text-align: center;
+}
+
+.logo {
+    margin: auto;
+    width: 300px;
+}
+
+form {
+    margin-top: 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .container {
+        width: 90%;
+    }
+    .logo {
+        width: 200px;
+    }
+  }
+  
